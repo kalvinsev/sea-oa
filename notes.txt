@@ -1,9 +1,13 @@
 1) add lazy loading
 2) make sure to add media frames
-2) onHover/onScroll animations^^^
-3) add an about page and a contact page
-4) add if business is currently open/ closed fucntionality
+2) onHover/onScroll animations^^^ ✅
+3) add an about page and a contact page ✅
+4) add if business is currently open/ closed fucntionality ✅
 5) add location using google maps api
-6) include original business website link
+6) include original business website link ✅
 7) add a services section with images ✅
 8) upload to github or vercel hosting 
+
+
+
+implement maps api, open/closed notification, hamburger menu, about/contact page
