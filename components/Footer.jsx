@@ -8,30 +8,45 @@ import DesktopFooter from "./DesktopFooter";
 export default function Footer() {
     
 
-    const [screenSize, setScreenSize] = useState(getCurrentDimension());
+    // const [screenSize, setScreenSize] = useState(getCurrentDimension());
     const breakpoint = 700;
-  	function getCurrentDimension(){
-    	return {
-      		width: window.innerWidth,
-      		height: window.innerHeight
-    	}
-  	}
+  	// function getCurrentDimension(){
+    // 	return {
+    //   		width: window.innerWidth,
+    //   		height: window.innerHeight
+    // 	}
+  	// }
     
-    useEffect(() => {
-        const updateDimension = () => {
-              setScreenSize(getCurrentDimension())
-        }
-        window.addEventListener('resize', updateDimension);
+    // useEffect(() => {
+    //     const updateDimension = () => {
+    //           setScreenSize(getCurrentDimension())
+    //     }
+    //     window.addEventListener('resize', updateDimension);
 
     
-        return(() => {
-            window.removeEventListener('resize', updateDimension);
-        })
-    }, [screenSize])
+    //     return(() => {
+    //         window.removeEventListener('resize', updateDimension);
+    //     })
+    // }, [screenSize])
+    const [width, setWidth] = useState(0)
+    const [height, setHeight] = useState(0)
+
+    const handleWindowResize = () => {
+        setWidth(window.innerWidth);
+        setHeight(window.innerHeight);
+    }
+
+    useEffect(() => {
+        // component is mounted and window is available
+        handleWindowResize();
+        window.addEventListener('resize', handleWindowResize);
+        // unsubscribe from the event on component unmount
+        return () => window.removeEventListener('resize', handleWindowResize);
+    }, []);
 
     return (
         <div className="footer-wrapper">
-            {screenSize.width < breakpoint ? <MobileFooter/> : <DesktopFooter/>}
+            {width < breakpoint ? <MobileFooter/> : <DesktopFooter/>}
         </div>
     );
 }
