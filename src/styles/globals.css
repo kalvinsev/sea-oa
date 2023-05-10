@@ -37,8 +37,6 @@ ul {
   margin: 0;
 }
 
-
-
 .header {
   background-color: black;
   height: 68px;
@@ -65,7 +63,6 @@ div .body-section img {
   display: block;
 }
 
-
 div .banner {
   background-color: black;
   padding: 4rem 3.5rem;
@@ -77,6 +74,7 @@ div .banner {
   word-wrap: break-word;
   z-index: 1;
 }
+
 div .desktop-banner {
   background-color: transparent;
   padding: 4rem 3.5rem;
@@ -128,8 +126,6 @@ div .long-text {
   font-size: calc(var(--font-heading-scale) * .9rem);
 }
 
-
-
 div .services-section {
   background-color: black;
   margin: 0;
@@ -158,7 +154,6 @@ div .service-card {
   flex-direction: column;
   max-width: 230px;
 }
-
 
 div .service-card img {
   height: 70%;
@@ -199,7 +194,6 @@ div .services-header span {
   text-transform: uppercase;
   font-weight: normal;
 }
-
 
 div .service-card-text {
   text-align: center;
@@ -308,12 +302,10 @@ div .placeholder-img img {
 .icons {
   padding: 0 20px 40px 0;
   margin: 0;
-  
 }
 
 .icon {
   padding:  0 15px 0 0;
-
 }
 
 div .about-text {
@@ -373,7 +365,7 @@ div .contact form {
 div .contact form input {
   height: 72px;
   width: 80%;
-  color: #fff;
+  color: white;
   background-color: #000;
   border: 1px #000;
   border-bottom: 1px solid #fff;
@@ -388,7 +380,6 @@ div .contact form input {
 input::placeholder {
   color: white;
   text-align: left;
-  
 }
 
 input:focus {
@@ -422,27 +413,29 @@ div .footer-wrapper {
   background-color: var(--gradient-base-accent-2);
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
   padding: 30px 0;
 }
 
 div .additional-info {
   height: fit-content;
   width: 85%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
 }
 
 div .desktop-footer {
   width: 100%;
   height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 div .additional-info-desktop {
   height: 100%;
   width: 100%;
 }
-
-
 
 .additional-info p {
   padding: 10px 0;
@@ -465,7 +458,7 @@ div .additional-info-desktop {
 }
 
 .copyright-content {
-  padding-top: 30px;
+  padding-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -476,10 +469,18 @@ div .additional-info-desktop {
 
 .copyright-icon {
   color: white;
+  padding-right: 5px;
 }
 
 .flex {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+.line {
+  margin-top: 20px;
+  background-color: #3a3a3a;
+  border: none;
+  height: 1px;
 }

@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import * as AiIcons from "react-icons/ai";
-export default function DesktopFooter (){
+
+export default function DesktopFooter () {
     const [isOpen, setIsOpen] = useState(false);
 
-    function checkOpenStatus(){
+    function checkOpenStatus() {
         let d = new Date();
         let hour = d.getHours();
         let day = d.getDay();
-        if((hour > 8 && hour < 21) && (day != 5 || day!= 6)){
+        if((hour > 7 && hour < 21) && (day != 6 && day!= 7)){
             setIsOpen(true);
         }
     }
@@ -16,6 +17,7 @@ export default function DesktopFooter (){
     useEffect(() => {
         checkOpenStatus();
     },[]);
+
     return (
         <div className="desktop-footer">
             <div className="additional-info">
@@ -29,15 +31,16 @@ export default function DesktopFooter (){
                     <div className="hours-info">
                         <div className="open-closed">
                             <h2>Hours</h2>
-                            {isOpen ? <p>Open now</p>: <p>Now closed</p>}
+                            {isOpen ? <p style={{color: 'green'}}>Open now</p>: <p style={{color: 'blue'}}>Now closed</p>}
                         </div>
-                        <p><strong>Mon.-Fri. | 8am - 9pm</strong></p>
+                        <p><strong>Mon. - Fri. | 8am - 9pm</strong></p>
                         <p>Sat. - Sun. | Closed</p>
                     </div>
                 </div>
-                <Link href="https://charlyrv84.wixsite.com/charlysgym/home" className="copyright-content">
+                <hr className="line"></hr>
+                <Link href="https://charlyrv84.wixsite.com/charlysgym/about2" className="copyright-content">
                     <AiIcons.AiOutlineCopyrightCircle size={15} className="copyright-icon"/>
-                    <p className="copyright-content">2023, Charly&apos;s gym unofficial website</p>
+                    <p className="copyright-content">2023, Charly&apos;s gym unofficial</p>
                 </Link>
             </div>
         </div>

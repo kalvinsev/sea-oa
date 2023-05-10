@@ -1,6 +1,3 @@
-import Link from "next/link";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Menu from "./Menu";
 
 export default function Header(){

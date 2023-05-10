@@ -1,6 +1,5 @@
 import React, { useState} from 'react';
 import Link from "next/link";
-import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import * as HiIcons from "react-icons/hi2"
 import { SidebarData } from './SideBar';
